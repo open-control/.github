@@ -1,14 +1,13 @@
+<h1>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/open-control/.github/main/logo-white.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/open-control/.github/main/logo.svg">
-  <img alt="Open Control" src="https://raw.githubusercontent.com/open-control/.github/main/logo.svg" width="48" align="left">
+  <img alt="" src="https://raw.githubusercontent.com/open-control/.github/main/logo.svg" width="36" valign="middle">
 </picture>
-
-# Open Control
+&nbsp;Open Control
+</h1>
 
 **A modular C++17 framework for building hardware controllers.**
-
-<br clear="left"/>
 
 > **Alpha** - API subject to change. Not recommended for production.
 
