@@ -1,7 +1,7 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/open-control/.github/main/logo-white.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/open-control/.github/main/logo.svg">
-  <img alt="Open Control" src="https://raw.githubusercontent.com/open-control/.github/main/logo.svg" width="80" align="left">
+  <img alt="Open Control" src="https://raw.githubusercontent.com/open-control/.github/main/logo.svg" width="48" align="left">
 </picture>
 
 # Open Control
