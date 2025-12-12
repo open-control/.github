@@ -39,35 +39,35 @@ pio run -e release -t upload
 ## Architecture
 
 ```
-┌────────────────────────────────────────────────────────────────────┐
-│                         Your Application                           │
-│   IContext lifecycle · Fluent input bindings · Scoped cleanup      │
-├────────────────────────────────────────────────────────────────────┤
-│                   Framework (platform-agnostic)                    │
-│                                                                    │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌──────────────┐ │
-│  │ InputBinding│ │ContextMgr  │ │  EventBus   │ │  Signal<T>   │ │
-│  │ gestures    │ │ lifecycle   │ │  pub/sub    │ │  reactive    │ │
-│  └─────────────┘ └─────────────┘ └─────────────┘ └──────────────┘ │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌──────────────┐ │
-│  │ Result<T>   │ │ Settings<T> │ │EncoderLogic │ │   APIs       │ │
-│  │ error types │ │ persistence │ │ 3 modes     │ │ Button/Enc/  │ │
-│  └─────────────┘ └─────────────┘ └─────────────┘ │ MIDI         │ │
-│                                                   └──────────────┘ │
-│                   Compiles native · 74+ unit tests                 │
-├────────────────────────────────────────────────────────────────────┤
-│                         HAL Interface                              │
-│   IMidi · IEncoder · IButton · IDisplay · IStorage · IMultiplexer  │
-├────────────────────────────────────────────────────────────────────┤
-│                      HAL Implementations                           │
-│   ┌──────────────────────┐     ┌──────────────────────┐           │
-│   │      hal-teensy      │     │  hal-daisy (planned) │           │
-│   │  USB MIDI · Encoders │     │                      │           │
-│   │  Buttons · ILI9341   │     │                      │           │
-│   │  EEPROM · LittleFS   │     │                      │           │
-│   │  Multiplexers        │     │                      │           │
-│   └──────────────────────┘     └──────────────────────┘           │
-└────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────┐
+│                        Your Application                          │
+│  IContext lifecycle · Fluent input bindings · Scoped cleanup     │
+├──────────────────────────────────────────────────────────────────┤
+│                  Framework (platform-agnostic)                   │
+│                                                                  │
+│  ┌─────────────┐ ┌─────────────┐ ┌───────────┐ ┌──────────────┐  │
+│  │InputBinding │ │ ContextMgr  │ │ EventBus  │ │  Signal<T>   │  │
+│  │  gestures   │ │  lifecycle  │ │  pub/sub  │ │   reactive   │  │
+│  └─────────────┘ └─────────────┘ └───────────┘ └──────────────┘  │
+│  ┌─────────────┐ ┌─────────────┐ ┌───────────┐ ┌──────────────┐  │
+│  │  Result<T>  │ │ Settings<T> │ │  Encoder  │ │  HAL APIs    │  │
+│  │ error types │ │ persistence │ │  3 modes  │ │ Btn/Enc/MIDI │  │
+│  └─────────────┘ └─────────────┘ └───────────┘ └──────────────┘  │
+│                                                                  │
+│                 Compiles native · 74+ unit tests                 │
+├──────────────────────────────────────────────────────────────────┤
+│                        HAL Interface                             │
+│  IMidi · IEncoder · IButton · IDisplay · IStorage · IMultiplexer │
+├──────────────────────────────────────────────────────────────────┤
+│                     HAL Implementations                          │
+│  ┌────────────────────────┐   ┌────────────────────────┐         │
+│  │      hal-teensy        │   │   hal-daisy (planned)  │         │
+│  │  USB MIDI · Encoders   │   │                        │         │
+│  │  Buttons · ILI9341     │   │                        │         │
+│  │  EEPROM · LittleFS     │   │                        │         │
+│  │  Multiplexers          │   │                        │         │
+│  └────────────────────────┘   └────────────────────────┘         │
+└──────────────────────────────────────────────────────────────────┘
 ```
 
 ---
