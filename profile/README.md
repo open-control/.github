@@ -161,7 +161,7 @@ settings.save();  // only writes if dirty
 ### Context System
 
 ```cpp
-class MyContext : public oc::context::IContext {
+class MyContext : public oc::interface::IContext {
 public:
     static constexpr Requirements REQUIRES{
         .button = true, .encoder = true, .midi = true
