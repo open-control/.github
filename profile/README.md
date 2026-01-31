@@ -15,7 +15,7 @@
 
 ## Overview
 
-Open Control is a **platform-agnostic** framework for building any type of controller. The core compiles and tests natively on desktop (200+ unit tests), while HAL layers provide hardware drivers.
+Open Control is a **platform-agnostic** framework for building any type of controller. The core compiles and tests natively on desktop, while HAL layers provide hardware drivers.
 
 **Platforms:**
 - **Teensy 4.x** - Supported and tested
